@@ -30,6 +30,7 @@ public class TestMode {
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
         $("[data-test-id=password] input").setValue(registeredUser.getPassword());
         $("[data-test-id=action-login]").click();
+        $(withText("Личный кабинет")).shouldBe(visible, Duration.ofSeconds(15));
     }
 
     @Test
